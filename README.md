@@ -27,4 +27,14 @@ atajos: emmet ->
     - los elementos se van a posicionar a partir del telefono
 
 # Reto:
-- Capas 4-10
+- Capas 4-10 ✅
+
+## Clase 4: Agregando los conejos por CSS
+Lecturas recomendadas:
+- https://dev.to/cchana/explained-creating-a-zigzag-pattern-with-just-css-13g1
+- https://www.magicpattern.design/tools/css-backgrounds
+- https://css-tricks.com/a-few-background-patterns-sites/
+- https://developer.mozilla.org/en-US/docs/Web/CSS/animation
+
+# Reto:
+- Completar los patrones de Zig-Zag del Wall con Linear gradients

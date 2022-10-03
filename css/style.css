@@ -1,6 +1,7 @@
 :root {
     --color-background: #CCEFFF;
     --bunny-color: #fff;
+    --wall-color: rgb(169, 110, 0);
 }
 
 body {
@@ -9,6 +10,7 @@ body {
     width: 100%;
     display: grid;
     place-items: center;
+    background-color: rgb(255, 191, 64);
 }
 
 .phone {
@@ -21,78 +23,162 @@ body {
     box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
 }
 
-.layer-1 {
+.phone >* {
+    border: solid 1px black;
     position: absolute;
+    bottom: 0;
+}
+
+/* Bunnys */
+.layer-1,.layer-2, .layer-4,.layer-6{
+    background: transparent; 
+    width: 70px;
+}
+
+/* Walls */
+.layer-3,.layer-5,.layer-7{
+    background: var(--wall-color);
+}
+
+.layer-1 {
     z-index: 1;
     height: 450px;
-    width: 80px;
-    background: var(--bunny-color);
     bottom: 0;
     right: 60px;
 }
 
 .layer-2 {
-    position: absolute;
     z-index: 2;
     height: 450px;
-    width: 80px;
-    background: var(--bunny-color);
     bottom: 0;
     left: 60px;
-
 }
 
 .layer-3 {
-    position: absolute;
     z-index: 3;
     left: 0;
     right: 0;
     margin: 0 auto;
-    bottom: 0;
     width: 220px;
     height: 400px;
-    background: wheat;
-
 }
 
 .layer-4 {
-    position: absolute;
     z-index: 4;
-
+    height: 350px;
+    left: 60px;
 }
 
 .layer-5 {
-    position: absolute;
     z-index: 5;
-
+    height: 300px;
+    width: 200px;
+    border-bottom-left-radius: 30px;
 }
 
 .layer-6 {
-    position: absolute;
     z-index: 6;
-
+    right: 60px;
+    height: 250px;
 }
 
 .layer-7 {
-    position: absolute;
     z-index: 7;
-
+    right: 0;
+    width: 200px;
+    height: 200px;
+    border-bottom-right-radius: 30px;
 }
 
+/* Clouds and Bush */
 .layer-8 {
-    position: absolute;
     z-index: 8;
-
+    width: 200px;
+    height: 100px;
+    background: rgb(76, 231, 76);
+    margin: 0 auto;
+    left: 0;
+    right: 0;
 }
 
 .layer-9 {
-    position: absolute;
     z-index: 9;
-
+    background: white;
+    left: 0;
+    width: 100px;
+    height: 60px;
+    border-bottom-left-radius: 30px;
 }
 
 .layer-10 {
-    position: absolute;
     z-index: 10;
-
+    background: white;
+    right: 0;
+    width: 100px;
+    height: 60px;
+    border-bottom-right-radius: 30px;
 }
+
+
+/* Bunny Definition */
+.left-ear--outer, .right-ear--outer{
+    position: inherit;
+    background: var(--bunny-color);
+    width: 20px;
+    height: 60px;
+    border-radius: 90%;
+}
+
+.left-ear--inner, .right-ear--inner{
+    background-color: pink;
+    position: inherit;
+    width: 10px;
+    height: 50px;
+    border-radius: 90%;
+    top: 8px;
+}
+
+.left-ear--outer{    
+    left: 10px;
+}
+
+.left-ear--inner{
+    left: 15px;
+}
+
+.right-ear--outer{
+    right: 10px;
+}
+
+.right-ear--inner{
+    right: 15px;
+}
+
+.head{
+    position: inherit;
+    background: var(--bunny-color);
+    width: 100%;
+    height: 60px;
+    border-radius: 100%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 30px;
+}
+
+.head__eye{
+    position: inherit;
+    background: grey;
+    width: 7px;
+    height: 7px;
+    border-radius: 100%;
+    top: 10px;
+}
+.head__eye--left{
+    left: 25px;
+}
+.head__eye--right{
+    right: 25px;
+}
+
+/* End Bunny */
